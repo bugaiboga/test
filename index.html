@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/media.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header class="header" id="header">
+          <div class="header__top">
+            <div class="header__top-info">
+              <ul class="header__list-info">
+                <li>
+                  <a href="#"> Магазины </a>
+                </li>
+                <li class="header__info-location">
+                  <a href="#">
+                    <img
+                      src="./images/icons/location.svg"
+                      alt="vector-location"
+                    />
+                    Санкт-Петербург
+                  </a>
+                </li>
+                <li class="header__info-mail">
+                  <a href="#">
+                    <img src="./images/icons/mail.svg" alt="vector-mail" />
+                    reddragon-spb@mail.ru
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__menu-container">
+              <nav class="header__nav">
+                <menu class="header__menu" id="header__menu">
+                  <ul class="header__menu-list">
+                    <li>
+                      <a class="header__menu-link" href="#">О магазине</a>
+                    </li>
+                    <li>
+                      <a class="header__menu-link" href="#"
+                        >Оплата и доставка</a
+                      >
+                    </li>
+                    <li>
+                      <a class="header__menu-link" href="#">Дисконтная карта</a>
+                    </li>
+                    <li>
+                      <a class="header__menu-link" href="#">Вакансии </a>
+                    </li>
+                    <li>
+                      <a class="header__menu-link" href="#">Оптовикам </a>
+                    </li>
+                    <li>
+                      <a class="header__menu-link" href="#">Контакты </a>
+                    </li>
+                    <li>
+                      <a class="header__menu-link" href="#">Новости </a>
+                    </li>
+                    <li>
+                      <a class="header__menu-link" href="#">Акции </a>
+                    </li>
+                    <li>
+                      <a class="header__menu-link" href="#">Франшиза </a>
+                    </li>
+                  </ul>
+                </menu>
+              </nav>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="header__shop-navigate">
+              <div class="header__logo">
+                <a href="#">
+                  <img src="./images/icons/logo.svg" alt="logo" />
+                </a>
+              </div>
+              <div class="header__btn-block">
+                <button class="header__btn-catalog"><p>Каталог товаров</p></button>
+              </div>
+              <div class="header__search-block">
+                <input
+                class="header__search-input"
+                  type="text"
+                  name="search"
+                  placeholder="Поиск по товарам"
+                  id="search__block"
+                />
+              </div>
+            </div>
+            <div class="header__user-service">
+              <div class="recall">
+                <a href="#">
+                  <img src="./images/icons/calling.svg" alt="calling" />
+                  8 (812) 701 01 87
+                </a>
+                <p>Обратный звонок</p>
+              </div>
+              <div class="account">
+                <button>
+                  <img src="./images/icons/user.svg" alt="user" />
+                </button>
+                <p>Вход</p>
+              </div>
+              <div class="card">
+                <span class="count">12</span>
+                <button>
+                  <img src="./images/icons/shopping-cart.svg" alt="bascket" />
+                </button>
+                <p>Корзина</p>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <!-- <section class="page main-page">
+        <div class="container">
+          <div class="main-slider">
+            <div class="main-slide">
+              <div class="content">
+                <h1 class="main__title">Мисо-супы японского бренда Marukome</h1>
+                <p>Лучшие цены на всю серию продуктов</p>
+              </div>
+            </div>
+            <div class="main-slide">
+              <div class="content">
+                <h1 class="main__title">Мисо-супы японского бренда Marukome</h1>
+                <p>Лучшие цены на всю серию продуктов</p>
+              </div>
+            </div>
+            <div class="main-slide">
+              <div class="content">
+                <h1 class="main__title">Мисо-супы японского бренда Marukome</h1>
+                <p>Лучшие цены на всю серию продуктов</p>
+              </div>
+            </div>
+            <div class="main-slide">
+              <div class="content">
+                <h1 class="main__title">Мисо-супы японского бренда Marukome</h1>
+                <p>Лучшие цены на всю серию продуктов</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page feature-page">
+        <div class="container">
+          <div class="features__wrapper">
+            <div class="item">
+              <img
+                src="./images/content/features-vectors/truck.svg"
+                alt="truck"
+              />
+              <h4>Бесплатная доставка</h4>
+              <p>по Санкт-Петербургу от 1500 руб.</p>
+            </div>
+            <div class="item">
+              <img
+                src="./images/content/features-vectors/shop.svg"
+                alt="shop"
+              />
+              <h4>Бесплатный самовывоз</h4>
+              <p>из 11 розничных магазинов</p>
+            </div>
+            <div class="item">
+              <img
+                src="./images/content/features-vectors/cooperative-handshake.svg"
+                alt="handshake"
+              />
+              <h4>Выгодные условия</h4>
+              <p>для оптовых клиентов</p>
+            </div>
+            <div class="item">
+              <img
+                src="./images/content/features-vectors/tickets-checked.svg"
+                alt="tickets"
+              />
+              <h4>Дисконтная карта</h4>
+              <p>на скидку 7% при покупке от 3000 руб.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page projects-page">
+        <div class="container">
+          <h3 class="projects__title page__title">Наши проекты</h3>
+          <div class="projects__wrapper">
+            <div class="item item-first">
+              <a href="#">
+                <img
+                  src="./images/content/projects-logo/logo-1.png"
+                  alt="logo"
+                />
+                <span
+                  ><img src="./images/icons/arrow-up-right.svg" alt="arrow"
+                /></span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img
+                  src="./images/content/projects-logo/logo-2.png"
+                  alt="logo"
+                />
+                <span
+                  ><img src="./images/icons/arrow-up-right.svg" alt="arrow"
+                /></span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img
+                  src="./images/content/projects-logo/logo-3.png"
+                  alt="logo"
+                />
+                <span
+                  ><img src="./images/icons/arrow-up-right.svg" alt="arrow"
+                /></span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img
+                  src="./images/content/projects-logo/logo-4.png"
+                  alt="logo"
+                />
+                <span
+                  ><img src="./images/icons/arrow-up-right.svg" alt="arrow"
+                /></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page main-casts__page">
+        <div class="container">
+          <div class="main-casts__wrapper">
+            <div class="item">
+              <img src="/images/content/main-casts/image-1.png" alt="PNG" />
+              <a href="#">Товары со скидкой</a>
+            </div>
+            <div class="item">
+              <img src="/images/content/main-casts/image-2.png" alt="PNG" />
+              <a href="#">Новые поступления</a>
+            </div>
+            <div class="item">
+              <img src="/images/content/main-casts/image-3.png" alt="PNG" />
+              <a href="#">Японские продукты</a>
+            </div>
+            <div class="item">
+              <img src="/images/content/main-casts/image-4.png" alt="PNG" />
+              <a href="#">Корейские продукты</a>
+            </div>
+            <div class="item">
+              <img src="/images/content/main-casts/image-5.png" alt="PNG" />
+              <a href="#">Китайские продукты</a>
+            </div>
+            <div class="item">
+              <img src="/images/content/main-casts/image-6.png" alt="PNG" />
+              <a href="#">Вьетнамские продукты</a>
+            </div>
+            <div class="item">
+              <img src="/images/content/main-casts/image-7.png" alt="PNG" />
+              <a href="#">Тайские продукты</a>
+            </div>
+            <div class="item">
+              <img src="/images/content/main-casts/image-8.png" alt="PNG" />
+              <a href="#">Индийские продукты</a>
+            </div>
+            <div class="item">
+              <img src="/images/content/main-casts/image-9.png" alt="PNG" />
+              <a href="#">Овощи и фрукты</a>
+            </div>
+            <div class="item">
+              <img src="/images/content/main-casts/image-10.png" alt="PNG" />
+              <a href="#">Другие продукты</a>
+            </div>
+          </div>
+          <div class="main-casts__banner">
+            <h3 class="page__title">Эксклюзивные товары</h3>
+          </div>
+        </div>
+      </section>
+      <section class="page offers-page">
+        <div class="container">
+          <div class="offers__buttons">
+            <button class="active">Лучшие предложения</button>
+            <button>Новинки</button>
+          </div>
+          <div class="offers__wrapper">
+            <div class="item">
+              <div class="badges">
+                <span class="limit">Ограничения по доставке</span>
+                <span class="new">New!</span>
+                <span class="sale">Sale!</span>
+              </div>
+              <div class="image">
+                <img src="./images/content/offer-items/image-1.png" alt="PNG" />
+              </div>
+              <a href="#">Салат из водорослей "Чука", 1000 гр</a>
+              <div class="description">
+                <p class="prev-price"><span> 468 ₽</span> -73 ₽</p>
+                <p class="price">395 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+            <div class="item">
+              <div class="badges">
+                <span class="new">New!</span>
+              </div>
+              <div class="image">
+                <img src="./images/content/offer-items/image-2.png" alt="PNG" />
+              </div>
+              <a href="#">Водоросли нори Gold Синянг 50л, Ю. Корея 130 г</a>
+              <div class="description">
+                <p class="price">709 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+            <div class="item">
+              <div class="badges">
+                <span class="limit">Ограничения по доставке</span>
+              </div>
+              <div class="image">
+                <img src="./images/content/offer-items/image-3.png" alt="PNG" />
+              </div>
+              <a href="#">Кокосовое молоко Aroy-D 500мл</a>
+              <div class="description">
+                <p class="price">215 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="./images/content/offer-items/image-4.png" alt="PNG" />
+              </div>
+              <a href="#">Набор для супа Том Ям свежий 250 гр</a>
+              <div class="description">
+                <p class="prev-price"><span> 506 ₽</span> -30 ₽</p>
+                <p class="price">476 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+            <div class="item">
+              <div class="badges">
+                <span class="limit">Ограничения по времени</span>
+                <span class="sale">Sale!</span>
+              </div>
+              <div class="image">
+                <img src="./images/content/offer-items/image-5.png" alt="PNG" />
+              </div>
+              <a href="#">Лапша крахмальная Фунчеза 500 г</a>
+              <div class="description">
+                <p class="prev-price"><span> 468 ₽ ₽</span> -73 ₽</p>
+                <p class="price">395 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+            <div class="item">
+              <div class="badges">
+                <span class="sale">Sale!</span>
+              </div>
+              <div class="image">
+                <img src="./images/content/offer-items/image-6.png" alt="PNG" />
+              </div>
+              <a href="#">Дим Сам со свининой тм ЛЕПКА, 220 гр</a>
+              <div class="description">
+                <p class="prev-price"><span> 468 ₽</span> -73 ₽</p>
+                <p class="price">395 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="./images/content/offer-items/image-7.png" alt="PNG" />
+              </div>
+              <a href="#">Моти Дайфуку ассорти Вкус Азии, 260 гр т.м. Леп...</a>
+              <div class="description">
+                <p class="price">709 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="./images/content/offer-items/image-8.png" alt="PNG" />
+              </div>
+              <a href="#">Соус Шрирача Vi Hao, 320 г</a>
+              <div class="description">
+                <p class="price">205 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+            <div class="item">
+              <div class="badges">
+                <span class="sale">Sale!</span>
+              </div>
+              <div class="image">
+                <img src="./images/content/offer-items/image-9.png" alt="PNG" />
+              </div>
+              <a href="#">Жевательная резинка CORIS со вкусом Колы, 11 г</a>
+              <div class="description">
+                <p class="prev-price"><span> 506 ₽</span> -30 ₽</p>
+                <p class="price">476 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+            <div class="item">
+              <div class="badges">
+                <span class="sale">Sale!</span>
+              </div>
+              <div class="image">
+                <img
+                  src="./images/content/offer-items/image-10.png"
+                  alt="PNG"
+                />
+              </div>
+              <a href="#"
+                >Маршмеллоу клубничное в вафельных стаканчиках, 1...</a
+              >
+              <div class="description">
+                <p class="prev-price"><span> 468 ₽</span> -73 ₽</p>
+                <p class="price">395 ₽</p>
+              </div>
+              <button>В корзину</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page banners-page">
+        <div class="container">
+          <div class="banners__wrapper">
+            <div class="banner left">
+              <h3 class="title page__title">
+                Попробуйте новые вкусы тайской кухни
+              </h3>
+              <button>Посмотреть сейчас</button>
+            </div>
+            <div class="banner right">
+              <h3 class="title page__title">
+                Ощутите всю гамму морепродуктов для восточных блюд
+              </h3>
+              <button>Посмотреть сейчас</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page about-page">
+        <div class="container">
+          <div class="about__wrapper">
+            <div class="about__side left">
+              <h3 class="page__title">
+                Продукты и ингредиенты для суши. Продукты для Азиатской кухни
+              </h3>
+              <h4 class="subtitle">
+                Рады видеть вас в интернет-магазине КРАСНЫЙ ДРАКОН!
+              </h4>
+              <p>
+                Мы занимаемся импортом и продажей товаров из Японии, Китая,
+                Южной Кореи, Таиланда, Индии и Вьетнама. Главным преимуществом
+                нашего магазина является огромный ассортимент продуктов для
+                приготовления блюд паназиатской кухни, а также снеков, напитков,
+                сладостей и фруктов. У нас представлены такие всемирно известные
+                марки, как Lee Kum Kee, PRB, Aroy-D, FOCO, Thai Food King,
+                Kanokwan, Thai Dancer, Kikkoman, Kewpie, Mizkan и многие другие!
+              </p>
+              <p>
+                В нашем интернет-магазине вы можете сделать заказ на любую сумму
+                и получить товар удобным для вас способом:
+              </p>
+              <ul>
+                <li>Самовывоз из 10 розничных магазинов г. Санкт-Петербург;</li>
+                <li>
+                  Доставка по РФ «Почтой России» или транспортными компаниями
+                  CDEK, Boxberry, ПЭК, «Деловые линии», PickPoint и проч.
+                </li>
+                <li>
+                  При заказе от 1500 рублей (в зависимости от района) доставка
+                  по Санкт-Петербургу бесплатная! Подробности в разделе
+                  <a href="#"> Оплата и доставка </a>
+                </li>
+              </ul>
+              <p>
+                Также мы работаем с оптовыми клиентами и готовы предложить
+                выгодные условия сотрудничества.
+              </p>
+              <p>
+                Телефон для справок:
+                <a class="phone-link" href="#"> 8 (812) 701-01-87</a>
+              </p>
+              <button class="readmoore">
+                <p>Подробнее о нас</p>
+                <img src="./images/icons/arrow-down-red.svg" alt="arrow" />
+              </button>
+            </div>
+            <div class="about__side right">
+              <img src="./images/content/bg/about.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="review-page">
+        <div class="container">
+          <h3 class="page__title review__title">Последние отзывы</h3>
+          <div class="review-slider">
+            <div class="review">
+              <div class="product">
+                <div class="image">
+                  <img
+                    src="./images/content/reviews-images/product-1.jpg"
+                    alt="JPG"
+                  />
+                </div>
+                <div class="description">
+                  <a class="link" href="#">Водоросли даши Комбу 200 гр</a>
+                  <div class="stars">
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                Соотношение цена-качество на пятерку. Брала чисто для бульона.
+                Получается прекрасно, на вкус что надо✌? Получается хорошая
+                основа для супов и...
+              </div>
+              <a href="#">
+                <div class="user">
+                  <div class="avatar">
+                    <img
+                      src="./images/content/reviews-images/avatar-1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="description">
+                    <p class="name">Александр</p>
+                    <p class="date">19 августа 2021 14:43</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="review">
+              <div class="product">
+                <div class="image">
+                  <img
+                    src="./images/content/reviews-images/product-1.jpg"
+                    alt="JPG"
+                  />
+                </div>
+                <div class="description">
+                  <a class="link" href="#">Водоросли даши Комбу 200 гр</a>
+                  <div class="stars">
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                Соотношение цена-качество на пятерку. Брала чисто для бульона.
+                Получается прекрасно, на вкус что надо✌? Получается хорошая
+                основа для супов и...
+              </div>
+              <a href="#">
+                <div class="user">
+                  <div class="avatar">
+                    <img
+                      src="./images/content/reviews-images/avatar-1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="description">
+                    <p class="name">Александр</p>
+                    <p class="date">19 августа 2021 14:43</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="review">
+              <div class="product">
+                <div class="image">
+                  <img
+                    src="./images/content/reviews-images/product-1.jpg"
+                    alt="JPG"
+                  />
+                </div>
+                <div class="description">
+                  <a class="link" href="#">Водоросли даши Комбу 200 гр</a>
+                  <div class="stars">
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                Соотношение цена-качество на пятерку. Брала чисто для бульона.
+                Получается прекрасно, на вкус что надо✌? Получается хорошая
+                основа для супов и...
+              </div>
+              <a href="#">
+                <div class="user">
+                  <div class="avatar">
+                    <img
+                      src="./images/content/reviews-images/avatar-1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="description">
+                    <p class="name">Александр</p>
+                    <p class="date">19 августа 2021 14:43</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="review">
+              <div class="product">
+                <div class="image">
+                  <img
+                    src="./images/content/reviews-images/product-1.jpg"
+                    alt="JPG"
+                  />
+                </div>
+                <div class="description">
+                  <a class="link" href="#">Водоросли даши Комбу 200 гр</a>
+                  <div class="stars">
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                Соотношение цена-качество на пятерку. Брала чисто для бульона.
+                Получается прекрасно, на вкус что надо✌? Получается хорошая
+                основа для супов и...
+              </div>
+              <a href="#">
+                <div class="user">
+                  <div class="avatar">
+                    <img
+                      src="./images/content/reviews-images/avatar-1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="description">
+                    <p class="name">Александр</p>
+                    <p class="date">19 августа 2021 14:43</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="review">
+              <div class="product">
+                <div class="image">
+                  <img
+                    src="./images/content/reviews-images/product-1.jpg"
+                    alt="JPG"
+                  />
+                </div>
+                <div class="description">
+                  <a class="link" href="#">Водоросли даши Комбу 200 гр</a>
+                  <div class="stars">
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                Соотношение цена-качество на пятерку. Брала чисто для бульона.
+                Получается прекрасно, на вкус что надо✌? Получается хорошая
+                основа для супов и...
+              </div>
+              <a href="#">
+                <div class="user">
+                  <div class="avatar">
+                    <img
+                      src="./images/content/reviews-images/avatar-1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="description">
+                    <p class="name">Александр</p>
+                    <p class="date">19 августа 2021 14:43</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="review">
+              <div class="product">
+                <div class="image">
+                  <img
+                    src="./images/content/reviews-images/product-1.jpg"
+                    alt="JPG"
+                  />
+                </div>
+                <div class="description">
+                  <a class="link" href="#">Водоросли даши Комбу 200 гр</a>
+                  <div class="stars">
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                    <img src="./images/icons/star.svg" alt="star" />
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                Соотношение цена-качество на пятерку. Брала чисто для бульона.
+                Получается прекрасно, на вкус что надо✌? Получается хорошая
+                основа для супов и...
+              </div>
+              <a href="#">
+                <div class="user">
+                  <div class="avatar">
+                    <img
+                      src="./images/content/reviews-images/avatar-1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="description">
+                    <p class="name">Александр</p>
+                    <p class="date">19 августа 2021 14:43</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__coll">
+              <a class="logo" href="#">
+                <img src="./images/icons/logo.svg" alt="log" />
+              </a>
+              <div class="socials">
+                <a href="#">
+                  <img src="./images/icons/fb.svg" alt="facebook" />
+                </a>
+                <a href="#">
+                  <img src="./images/icons/insta.svg" alt="instagram" />
+                </a>
+                <a href="#">
+                  <img src="./images/icons/vk.svg" alt="vk" />
+                </a>
+              </div>
+              <a class="confidential-link" href="#"
+                >Политика конфиденциальности</a
+              >
+              <p class="copyrights__info">ИП Журавлева Елена Андреевна</p>
+              <p class="copyrights__info">ИНН 470411485269</p>
+              <p class="copyrights__info">ОГРНИП 311784704700400</p>
+              <div class="copyrights">
+                <p>© Красный Дракон 1996 - 2021</p>
+                <p>
+                  Created by
+                  <a href="#"
+                    >Quadrodizain
+                    <span
+                      ><img
+                        src="./images/icons/ion_arrow-forward-outline.svg"
+                        alt="arrow" /></span
+                  ></a>
+                </p>
+              </div>
+            </div>
+            <div class="footer__coll info__navigation">
+              <nav class="navigation">
+                <h5 class="footer__navigation-title">Информация</h5>
+                <menu>
+                  <ul>
+                    <li><a href="#"> О магазине </a></li>
+                    <li><a href="#"> Как сделать заказ </a></li>
+                    <li><a href="#"> Оплата и доставка </a></li>
+                    <li><a href="#"> Дисконтная карта </a></li>
+                    <li><a href="#"> Вакансии </a></li>
+                    <li><a href="#"> Оптовикам </a></li>
+                    <li><a href="#"> Контакты </a></li>
+                    <li><a href="#"> Новости </a></li>
+                    <li><a href="#"> Акции </a></li>
+                    <li><a href="#"> Франшиза </a></li>
+                  </ul>
+                </menu>
+              </nav>
+            </div>
+            <div class="footer__coll shop__navigation">
+              <nav class="navigation">
+                <h5 class="footer__navigation-title">Магазин</h5>
+                <menu>
+                  <ul>
+                    <li><a href="#"> Товары со скидкой </a></li>
+                    <li><a href="#"> Новые поступления </a></li>
+                    <li><a href="#"> Японские продукты </a></li>
+                    <li><a href="#"> Корейские продукты</a></li>
+                    <li><a href="#"> Китайские продукты</a></li>
+                    <li><a href="#"> Вьетнамские продукты</a></li>
+                    <li><a href="#"> Тайские продукты</a></li>
+                    <li><a href="#"> Индийские продукты</a></li>
+                    <li><a href="#"> Офощи и фрукты</a></li>
+                    <li><a href="#"> Другие продукты</a></li>
+                  </ul>
+                </menu>
+              </nav>
+            </div>
+            <div class="footer__coll">
+              <h5 class="footer__navigation-title">Контакты</h5>
+              <div class="contacts">
+                <ul>
+                  <li>
+                    <a href="#">8 (812) 701 01 87</a>
+                  </li>
+                  <li>
+                    <a href="#">8 (812) 701 02 02</a>
+                  </li>
+                  <li>
+                    <a class="mail" href="#">reddragon-spb@mail.ru</a>
+                  </li>
+                  <li>
+                    <p class="schedule">Пн—Вс 10:00—21:00</p>
+                  </li>
+                </ul>
+              </div>
+              <h5 class="footer__navigation-title">Магазины</h5>
+              <div class="location">
+                <ul>
+                  <li>
+                    <a href="#">Санкт-Петербург</a>
+                  </li>
+                  <li>
+                    <a href="#">Крым</a>
+                  </li>
+                  <li>
+                    <a class="mail" href="#">Ярославль</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer> -->
+    </main>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/slider.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
