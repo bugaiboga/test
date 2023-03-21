@@ -56,6 +56,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #fff;
+  padding: 5px;
 }
 .menu__bottom-list li {
   flex: 1;
