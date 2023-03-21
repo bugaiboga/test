@@ -24,7 +24,7 @@
           <div class="header__top">
             <div class="header__top-info">
               <ul class="header__list-info">
-                <li>
+                <li class="header__info-shops">
                   <a href="#"> Магазины </a>
                 </li>
                 <li class="header__info-location">
@@ -89,12 +89,19 @@
                   <img src="./images/icons/logo.svg" alt="logo" />
                 </a>
               </div>
-              <div class="header__btn-block">
-                <button class="header__btn-catalog"><p>Каталог товаров</p></button>
+              <div class="header__btn-block" id="catalog__btn-block">
+                <button class="header__btn-catalog" id="main__catalog-btn">
+                  <img
+                    id="main__catalog-icon"
+                    src="./images/icons/menu.svg"
+                    alt="menu"
+                  />
+                  <p>Каталог товаров</p>
+                </button>
               </div>
               <div class="header__search-block">
                 <input
-                class="header__search-input"
+                  class="header__search-input"
                   type="text"
                   name="search"
                   placeholder="Поиск по товарам"
@@ -125,9 +132,137 @@
               </div>
             </div>
           </div>
+          <div class="main__catalog" id="main__catalog">
+            <div class="main__catalog-sidebar">
+              <ul class="catalog__sidebar-list" id="catalog__sidebar-list">
+                <li class="catalog__sidebar-item catalog__sidebar-item--sale">
+                  <a href="#"
+                    ><img
+                      src="./images/content/catalog-vectors/percent.svg"
+                      alt="vector"
+                    />
+                    <p>Товары со скидкой</p></a
+                  >
+                </li>
+                <li class="catalog__sidebar-item catalog__sidebar-item--new">
+                  <a href="#">
+                    <img
+                      src="./images/content/catalog-vectors/shopping-bag.svg"
+                      alt="vector"
+                    />
+                    <p>Новые поступления</p>
+                  </a>
+                </li>
+                <li class="catalog__sidebar-item">
+                  <a href="#">
+                    <img
+                      src="./images/content/catalog-vectors/icon-1.svg"
+                      alt="icon"
+                    />
+                    <p>Водоросли</p>
+                  </a>
+                </li>
+                <li class="catalog__sidebar-item">
+                  <a href="#"
+                    ><img
+                      src="./images/content/catalog-vectors/icon-2.svg"
+                      alt="vector"
+                    />
+                    <p>Готовые блюда, супы, салаты</p></a
+                  >
+                </li>
+                <li class="catalog__sidebar-item">
+                  <a href="#"
+                    ><img
+                      src="./images/content/catalog-vectors/icon-3.svg"
+                      alt="vector"
+                    />
+                    <p>Грибы, имбирь, соя</p></a
+                  >
+                </li>
+                <li class="catalog__sidebar-item">
+                  <a href="#"
+                    ><img
+                      src="./images/content/catalog-vectors/icon-4.svg"
+                      alt="vector"
+                    />
+                    <p>Замороженные продукты, полуфабрикаты, тесто</p></a
+                  >
+                </li>
+                <li class="catalog__sidebar-item active">
+                  <a href="#"
+                    ><img
+                      src="./images/content/catalog-vectors/icon-5.svg"
+                      alt="vector"
+                    />
+                    <p>Кокосовые продукты</p></a
+                  >
+                </li>
+                <li class="catalog__sidebar-item">
+                  <a href="#"
+                    ><img
+                      src="./images/content/catalog-vectors/icon-6.svg"
+                      alt="vector"
+                    />
+                    <p>Лапша, рис и продукты из него</p></a
+                  >
+                </li>
+                <li class="catalog__sidebar-item">
+                  <a href="#"
+                    ><img
+                      src="./images/content/catalog-vectors/icon-7.svg"
+                      alt="vector"
+                    />
+                    <p>Мази и БАДы</p></a
+                  >
+                </li>
+                <li class="catalog__sidebar-item">
+                  <a href="#"
+                    ><img
+                      src="./images/content/catalog-vectors/icon-8.svg"
+                      alt="vector"
+                    />
+                    <p>Мука, крахмал, сухари</p></a
+                  >
+                </li>
+                <li class="catalog__sidebar-item">
+                  <a href="#"
+                    ><img
+                      src="./images/content/catalog-vectors/icon-8.svg"
+                      alt="vector"
+                    />
+                    <p>Другие продукты</p></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="main__catalog-content">
+              <div class="main__catalog-wrapper">
+                <div class="main__catalog-inner">
+                  <ul>
+                    <li><h5>Готовые блюда</h5></li>
+                    <li><h5>Салаты</h5></li>
+                    <li><h5>Супы</h5></li>
+                    <li><a href="#">Супы быстрого приготовления</a></li>
+                    <li><a href="#">Мисо-супы</a></li>
+                    <li><a href="#">Консервированные супы</a></li>
+                    <li><a href="#">Корейские супы</a></li>
+                    <li><a href="#">Японские супы</a></li>
+                    <li><a href="#">Тайские супы</a></li>
+                    <li><a href="#">Наборы для супа</a></li>
+                  </ul>
+                </div>
+                <div class="main__catalog-banner">
+                  <h4>Попробуйте новые вкусы японсокй кухни</h4>
+                  <button>Посмотреть сейчас</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </header>
       </div>
-      <!-- <section class="page main-page">
+
+      <section class="page main-page">
         <div class="container">
           <div class="main-slider">
             <div class="main-slide">
@@ -201,10 +336,20 @@
           <div class="projects__wrapper">
             <div class="item item-first">
               <a href="#">
-                <img
-                  src="./images/content/projects-logo/logo-1.png"
-                  alt="logo"
-                />
+                <picture>
+                  <source
+                    srcset="./images/content/projects-logo/logo-1-tablet.png"
+                    media="(max-width: 1160px)"
+                  />
+                  <source
+                    srcset="./images/content/projects-logo/logo-1-mobile.png"
+                    media="(max-width: 660px)"
+                  />
+                  <img
+                    src="./images/content/projects-logo/logo-1.png"
+                    alt="MDN"
+                  />
+                </picture>
                 <span
                   ><img src="./images/icons/arrow-up-right.svg" alt="arrow"
                 /></span>
@@ -212,10 +357,21 @@
             </div>
             <div class="item">
               <a href="#">
-                <img
-                  src="./images/content/projects-logo/logo-2.png"
-                  alt="logo"
-                />
+                <picture>
+                  <source
+                    srcset="./images/content/projects-logo/logo-2-tablet.png"
+                    srcset="./images/content/projects-logo/logo-2-mobile.png"
+                    media="(max-width: 1160px)"
+                  />
+                  <source
+                    srcset="./images/content/projects-logo/logo-2-mobile.png"
+                    media="(max-width: 650px)"
+                  />
+                  <img
+                    src="./images/content/projects-logo/logo-2.png"
+                    alt="MDN"
+                  />
+                </picture>
                 <span
                   ><img src="./images/icons/arrow-up-right.svg" alt="arrow"
                 /></span>
@@ -223,10 +379,20 @@
             </div>
             <div class="item">
               <a href="#">
-                <img
-                  src="./images/content/projects-logo/logo-3.png"
-                  alt="logo"
-                />
+                <picture>
+                  <source
+                    srcset="./images/content/projects-logo/logo-3-mobile.png"
+                    media="(max-width: 650px)"
+                  />
+                  <source
+                    srcset="./images/content/projects-logo/logo-3-tablet.png"
+                    media="(max-width: 1160px)"
+                  />
+                  <img
+                    src="./images/content/projects-logo/logo-3.png"
+                    alt="MDN"
+                  />
+                </picture>
                 <span
                   ><img src="./images/icons/arrow-up-right.svg" alt="arrow"
                 /></span>
@@ -234,10 +400,20 @@
             </div>
             <div class="item">
               <a href="#">
-                <img
-                  src="./images/content/projects-logo/logo-4.png"
-                  alt="logo"
-                />
+                <picture>
+                  <source
+                    srcset="./images/content/projects-logo/logo-4-mobile.png"
+                    media="(max-width: 650px)"
+                  />
+                  <source
+                    srcset="./images/content/projects-logo/logo-4-tablet.png"
+                    media="(max-width: 1160px)"
+                  />
+                  <img
+                    src="./images/content/projects-logo/logo-4.png"
+                    alt="MDN"
+                  />
+                </picture>
                 <span
                   ><img src="./images/icons/arrow-up-right.svg" alt="arrow"
                 /></span>
@@ -313,7 +489,7 @@
               </div>
               <a href="#">Салат из водорослей "Чука", 1000 гр</a>
               <div class="description">
-                <p class="prev-price"><span> 468 ₽</span> -73 ₽</p>
+                <p class="prev-price"><span> 468 ₽</span> <b>-73 ₽</b></p>
                 <p class="price">395 ₽</p>
               </div>
               <button>В корзину</button>
@@ -350,7 +526,7 @@
               </div>
               <a href="#">Набор для супа Том Ям свежий 250 гр</a>
               <div class="description">
-                <p class="prev-price"><span> 506 ₽</span> -30 ₽</p>
+                <p class="prev-price"><span> 506 ₽</span> <b>-30 ₽</b></p>
                 <p class="price">476 ₽</p>
               </div>
               <button>В корзину</button>
@@ -365,7 +541,7 @@
               </div>
               <a href="#">Лапша крахмальная Фунчеза 500 г</a>
               <div class="description">
-                <p class="prev-price"><span> 468 ₽ ₽</span> -73 ₽</p>
+                <p class="prev-price"><span> 468 ₽ ₽</span> <b>-73 ₽</b></p>
                 <p class="price">395 ₽</p>
               </div>
               <button>В корзину</button>
@@ -379,7 +555,7 @@
               </div>
               <a href="#">Дим Сам со свининой тм ЛЕПКА, 220 гр</a>
               <div class="description">
-                <p class="prev-price"><span> 468 ₽</span> -73 ₽</p>
+                <p class="prev-price"><span> 468 ₽</span> <b>-73 ₽</b></p>
                 <p class="price">395 ₽</p>
               </div>
               <button>В корзину</button>
@@ -413,7 +589,7 @@
               </div>
               <a href="#">Жевательная резинка CORIS со вкусом Колы, 11 г</a>
               <div class="description">
-                <p class="prev-price"><span> 506 ₽</span> -30 ₽</p>
+                <p class="prev-price"><span> 506 ₽</span> <b>-30 ₽</b></p>
                 <p class="price">476 ₽</p>
               </div>
               <button>В корзину</button>
@@ -432,7 +608,7 @@
                 >Маршмеллоу клубничное в вафельных стаканчиках, 1...</a
               >
               <div class="description">
-                <p class="prev-price"><span> 468 ₽</span> -73 ₽</p>
+                <p class="prev-price"><span> 468 ₽</span> <b>-73 ₽</b></p>
                 <p class="price">395 ₽</p>
               </div>
               <button>В корзину</button>
@@ -753,10 +929,10 @@
           </div>
         </div>
       </section>
-      <footer class="footer">
+      <footer class="footer" id="footer">
         <div class="container">
           <div class="footer__wrapper">
-            <div class="footer__coll">
+            <div class="footer__coll copyrights__wrapper">
               <a class="logo" href="#">
                 <img src="./images/icons/logo.svg" alt="log" />
               </a>
@@ -829,42 +1005,46 @@
                 </menu>
               </nav>
             </div>
-            <div class="footer__coll">
-              <h5 class="footer__navigation-title">Контакты</h5>
-              <div class="contacts">
-                <ul>
-                  <li>
-                    <a href="#">8 (812) 701 01 87</a>
-                  </li>
-                  <li>
-                    <a href="#">8 (812) 701 02 02</a>
-                  </li>
-                  <li>
-                    <a class="mail" href="#">reddragon-spb@mail.ru</a>
-                  </li>
-                  <li>
-                    <p class="schedule">Пн—Вс 10:00—21:00</p>
-                  </li>
-                </ul>
+            <div class="footer__coll contacts__navigator">
+              <div class="contacts__wrapper">
+                <h5 class="footer__navigation-title">Контакты</h5>
+                <div class="contacts">
+                  <ul>
+                    <li>
+                      <a href="#">8 (812) 701 01 87</a>
+                    </li>
+                    <li>
+                      <a href="#">8 (812) 701 02 02</a>
+                    </li>
+                    <li>
+                      <a class="mail" href="#">reddragon-spb@mail.ru</a>
+                    </li>
+                    <li>
+                      <p class="schedule">Пн—Вс 10:00—21:00</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <h5 class="footer__navigation-title">Магазины</h5>
-              <div class="location">
-                <ul>
-                  <li>
-                    <a href="#">Санкт-Петербург</a>
-                  </li>
-                  <li>
-                    <a href="#">Крым</a>
-                  </li>
-                  <li>
-                    <a class="mail" href="#">Ярославль</a>
-                  </li>
-                </ul>
+              <div class="location__wrapper">
+                <h5 class="footer__navigation-title">Магазины</h5>
+                <div class="location">
+                  <ul>
+                    <li>
+                      <a href="#">Санкт-Петербург</a>
+                    </li>
+                    <li>
+                      <a href="#">Крым</a>
+                    </li>
+                    <li>
+                      <a class="mail" href="#">Ярославль</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </footer> -->
+      </footer>
     </main>
 
     <script
@@ -881,7 +1061,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="/js/slider.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="/js/catalog.js"></script>
   </body>
 </html>

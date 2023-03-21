@@ -8,6 +8,14 @@ $(".main-slider").slick({
   nextArrow: `
   <button type="button" class="main__slick-arrow main__slick-next"><img src="./images/icons/next-arrow.svg" alt="next-arrow"></button>
   `,
+  responsive: [
+    {
+      breakpoint: 560,
+      settings: {
+        arrows: false,
+      },
+    },
+  ],
 });
 $(".review-slider").slick({
   arrows: true,
@@ -19,4 +27,24 @@ $(".review-slider").slick({
   nextArrow: `
   <button type="button" class="review__slick-arrow review__slick-next"><img src="./images/icons/next-arrow.svg" alt="next-arrow"></button>
   `,
+  responsive: [
+    {
+      breakpoint: 1055,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 690,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });

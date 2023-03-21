@@ -46,7 +46,164 @@ button {
   font-size: 36px;
   line-height: 48px;
 }
-
+.menu__bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.menu__bottom-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__bottom-list li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__bottom-list li.active a {
+  color: #e42016;
+}
+.menu__bottom-list li.active a svg path {
+  stroke: #e42016;
+}
+.menu__bottom-list li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  line-height: 12px;
+  color: #41403e;
+}
+.menu__bottom-list li a svg {
+  stroke: #1b73a5;
+}
+.menu__bottom-list li a p {
+  margin-top: 4px;
+}
+.menu__bottom-list li.card span {
+  right: 28px;
+}
+.main__catalog {
+  width: 1416px;
+  height: 688px;
+  background: #41403e;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.catalog__sidebar-item {
+  padding: 16px 24px;
+  width: 336px;
+}
+.catalog__sidebar-item a {
+  color: #d0cec8;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 10px;
+}
+.catalog__sidebar-item.active {
+  background: #0e0e11;
+}
+.catalog__sidebar-item.active a::before {
+  display: none;
+}
+.catalog__sidebar-item a img {
+  margin-right: 10px;
+}
+.catalog__sidebar-item--sale a {
+  color: #e42016;
+}
+.catalog__sidebar-item--new a {
+  color: #59a47e;
+}
+.main__catalog-sidebar li a::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/arrow-catalog.svg");
+  right: -10px;
+}
+.catalog__sidebar-item--sale a::after,
+.catalog__sidebar-item--new a::after {
+  display: none;
+}
+.main__catalog-sidebar li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #d0cec8;
+  opacity: 0.25;
+  left: 0;
+  bottom: -16px;
+}
+.main__catalog-content {
+  background: #0e0e11;
+  width: 100%;
+  border-radius: 0 24px 24px 0;
+}
+.main__catalog-wrapper {
+  padding: 48px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.main__catalog-inner h5 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.main__catalog-inner a {
+  color: #a09f9f;
+  margin-bottom: 10px;
+  display: block;
+}
+.main__catalog-banner {
+  width: 408px;
+  border-radius: 24px;
+  padding: 36px;
+  background-image: url("../images/content/bg/catalog-banner-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.main__catalog-banner h4 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  color: #ffffff;
+}
+.main__catalog-banner button {
+  padding: 7px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+  background: #e42016;
+  border-radius: 8px;
+}
+.catalog__sidebar-close {
+  background: #41403e;
+}
+.catalog__sidebar-close a {
+  color: #fff;
+}
+.catalog__sidebar-close a::after {
+  display: none;
+}
 .header__top {
   padding: 15px 0;
   display: flex;
@@ -60,7 +217,7 @@ button {
 .header__list-info li {
   margin-right: 24px;
 }
-.header__list-info li:first-child a {
+.header__info-shops a {
   font-size: 12px;
   line-height: 16px;
   color: #e42016;
@@ -141,6 +298,10 @@ button {
   height: 100%;
   margin-right: 36px;
 }
+.header__btn-block {
+  margin-right: 24px;
+  position: relative;
+}
 .header__btn-catalog {
   display: flex;
   flex-direction: row;
@@ -161,15 +322,11 @@ button {
   color: #fff;
   position: relative;
 }
-.header__btn-catalog p::after {
-  content: "";
+.header__btn-catalog img {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url("../images/icons/menu.svg");
-  top: -3px;
-  left: 0;
-  transform: translate(-50%);
+  left: 25px;
 }
 .header__search-block {
   position: relative;
@@ -206,30 +363,31 @@ button {
   color: #41403e;
   text-align: center;
 }
-.header__user-service .recall {
+
+.recall {
   padding-left: 33px;
   position: relative;
 }
-.header__user-service .recall img {
+.recall img {
   position: absolute;
   width: 22px;
   height: 22px;
   left: 0;
   top: 0;
 }
-.header__user-service .recall p {
+.recall p {
   text-align: start;
 }
-.header__user-service .recall a {
+.recall a {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   color: #0e0e11;
 }
-.header__user-service .card {
+.card {
   position: relative;
 }
-.header__user-service .card span {
+.card span {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -286,7 +444,6 @@ button {
 .features__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .features__wrapper .item {
   width: 336px;
@@ -377,7 +534,7 @@ button {
   background-image: url("../images/content/bg/main-casts-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1416px;
+  width: 100%;
   height: 160px;
   border-radius: 16px;
   padding: 56px 120px;
@@ -420,6 +577,10 @@ button {
   border-radius: 16px;
   margin-top: 24px;
   position: relative;
+}
+.offers__wrapper .item a:hover {
+  text-decoration-line: underline;
+  color: #1b73a5;
 }
 .offers__wrapper .item .badges {
   position: absolute;
@@ -549,6 +710,9 @@ button {
 .about__side {
   width: 696px;
 }
+.about__side.left {
+  z-index: 3;
+}
 .about__side.left .subtitle {
   margin-top: 36px;
   font-weight: 600;
@@ -613,6 +777,7 @@ button {
   position: relative;
   height: 720px;
   padding: 40px;
+  z-index: 0;
 }
 .about__side.right img {
   position: absolute;
@@ -632,9 +797,10 @@ button {
 }
 .review-slider .review {
   height: 360px;
-  padding: 24px;
+  padding: 24px 24px 46px 24px;
   background: #ffffff;
   border-radius: 16px;
+
 }
 .review .product {
   display: flex;
@@ -663,12 +829,15 @@ button {
   font-size: 14px;
   line-height: 22px;
   color: #41403e;
+  display: block;
+  margin-bottom: auto;
 }
 .review .user {
   display: flex;
   align-items: center;
   padding: 4.5px 0;
-  margin-top: auto;
+  position: absolute;
+  bottom: 0;
 }
 .review .user .avatar {
   margin-right: 10px;
